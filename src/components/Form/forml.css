@@ -1,0 +1,125 @@
+:root {
+  --spgrey: rgb(15, 15, 15);
+  --spblue: rgb(71, 134, 227);
+  --spdblue: rgb(35, 59, 98);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.fu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bgbox {
+  background-color: var(--spgrey);
+  /* box-shadow: var(--spdblue) 0px 0px 30px; */
+  border: 1.5px var(--spdblue) solid;
+  padding: 3em 4em;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+
+  color: var(--spblue);
+  font-size: large;
+}
+
+.fields {
+  height: 14em;
+  gap: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.submit {
+  background-color: var(--spblue);
+  font-size: 1.2em;
+  padding: 0.2em 0.7em;
+  border-radius: 20em;
+  width: 50%;
+}
+
+input:focus {
+  animation: bord 0.3s linear 0s 1 normal forwards;
+}
+
+input {
+  animation: bordr 0.3s linear 0s 1 normal none;
+  border-color: transparent;
+  border-radius: 10em;
+  padding: 0.4em 0.6em;
+  width: 16em;
+  font-size: large;
+}
+
+.logo {
+  width: 2em;
+  background-color: var(--spblue);
+  padding: 20px;
+  border-radius: 25%;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.melo {
+  font-size: 3em;
+  /* font-family: cursive; */
+  font-weight: bold;
+}
+
+.selector {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2em;
+  margin: 1em 0em;
+  font-size: 0.9em;
+}
+
+.selector button {
+  padding: 0.3em 1em;
+  background-color: transparent;
+  color: var(--spblue);
+  border: 0px;
+}
+
+.sel {
+  border-bottom: 0.15em var(--spblue) solid !important;
+}
+
+.forgot {
+  font-size: 0.8em;
+  color: grey;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@keyframes bord {
+  from {
+    outline: 0px var(--spblue) transparent;
+  }
+  to {
+    outline: 2px var(--spblue) solid;
+  }
+}
+@keyframes bordr {
+  from {
+    outline: 2px var(--spblue) solid;
+  }
+  to {
+    outline: 0px var(--spblue) transparent;
+  }
+}
