@@ -2,6 +2,7 @@
   --spgrey: rgb(15, 15, 15);
   --spblue: rgb(71, 134, 227);
   --spdblue: rgb(35, 59, 98);
+  --spdbluea: rgba(35, 59, 98, 0);
 }
 
 button:hover {
@@ -15,8 +16,9 @@ button:hover {
 }
 
 .bgbox {
+  animation: pulse 2s ease-out 0s infinite normal none;
+
   background-color: var(--spgrey);
-  /* box-shadow: var(--spdblue) 0px 0px 30px; */
   border: 1.5px var(--spdblue) solid;
   padding: 3em 4em;
   border-radius: 5px;
@@ -72,7 +74,6 @@ input {
 
 .melo {
   font-size: 3em;
-  /* font-family: cursive; */
   font-weight: bold;
 }
 
@@ -121,5 +122,14 @@ input {
   }
   to {
     outline: 0px var(--spblue) transparent;
+  }
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0px 0px 0px 0px var(--spdblue);
+  }
+  to {
+    box-shadow: 0px 0px 0px 25px var(--spdbluea);
   }
 }
