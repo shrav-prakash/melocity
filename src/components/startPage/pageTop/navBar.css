@@ -17,3 +17,23 @@ h3 {
   color: var(--spblue);
   font-size: xx-large;
 }
+
+.logo {
+  width: 2em;
+  background-color: var(--spblue);
+  padding: 20px;
+  border-radius: 25%;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding-top: 1em;
+}
+
+.melo {
+  color: var(--spblue);
+  font-size: 3em;
+  font-weight: bold;
+}

@@ -1,10 +1,10 @@
-import PageTop from './pageTop/pageTop';
-import MainPage from './mainPage/mainPage'
+import NavBar from './pageTop/navBar';
+import MainPage from './mainPage/mainPage';
 
 export default function startPage() {
     return (
         <div>
-            <PageTop />
+            <NavBar />
             <MainPage />
         </div>
     );
