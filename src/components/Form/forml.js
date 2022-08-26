@@ -30,11 +30,16 @@ function Forml() {
     const [sel, setsel] = useState(1);
     const { register, formState: { errors }, handleSubmit } = useForm();
 
-    const onSubmit = data => console.log(data)
+    const onSubmit = data => {
+        console.log(data)
+        if (Object.keys(errors).length == 0) {
+            window.location = "/";
+        }
+    }
     console.log(errors)
 
     return (
-        <form className="bgbox" onSubmit={handleSubmit(onSubmit)}>
+        <form className="bgbox" onSubmit={handleSubmit(onSubmit)} action="/">
             <div className='heading'>
                 <img src={ico} className='logo' /><span className='melo'>Melocity</span>
             </div>

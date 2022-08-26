@@ -3,7 +3,7 @@ import './forml.css'
 function Field(props) {
     return (
         <div className="fu">
-            {/* <p>{props.err?.[props.fieldname] && 'xyzzzz'}</p> */}
+            <p id="err">{props.err?.[props.fieldname] && 'Please match the required format'}</p>
             <input
                 type={props.fieldtype}
                 placeholder={props.fieldname}

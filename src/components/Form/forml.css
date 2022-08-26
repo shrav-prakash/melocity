@@ -16,6 +16,12 @@ button:hover {
   /* height: 50px; */
 }
 
+#err {
+  font-size: 0.6em;
+  color: red;
+  height: 0.5em;
+}
+
 .bgbox {
   animation: pulse 2s ease-out 0s infinite normal none;
 
@@ -34,7 +40,7 @@ button:hover {
 
 .fields {
   height: 14em;
-  gap: 1.5em;
+  gap: 0em;
   display: flex;
   flex-direction: column;
 }
