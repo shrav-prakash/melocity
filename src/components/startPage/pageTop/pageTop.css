@@ -1,0 +1,19 @@
+:root {
+  --spblue: rgb(71, 134, 227);
+}
+
+.top {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 10vh;
+  margin-top: -20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  position: fixed;
+}
+
+h3 {
+  color: var(--spblue);
+  font-size: xx-large;
+}

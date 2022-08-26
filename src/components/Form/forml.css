@@ -13,6 +13,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  /* height: 50px; */
 }
 
 .bgbox {
@@ -44,6 +45,10 @@ button:hover {
   padding: 0.2em 0.7em;
   border-radius: 20em;
   width: 50%;
+}
+
+.submit:hover {
+  cursor: pointer;
 }
 
 input:focus {

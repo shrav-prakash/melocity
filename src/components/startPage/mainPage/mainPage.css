@@ -1,0 +1,26 @@
+:root {
+  --spblue: rgb(71, 134, 227);
+}
+
+h1 {
+  color: var(--spblue);
+}
+
+.main {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.submitSong {
+  background-color: var(--spblue);
+  font-size: 1.2em;
+  padding: 0.2em 0.7em;
+  border-radius: 20em;
+  width: 15%;
+}
