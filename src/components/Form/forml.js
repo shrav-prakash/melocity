@@ -33,7 +33,7 @@ function Forml() {
     const onSubmit = data => {
         console.log(data)
         if (Object.keys(errors).length == 0) {
-            window.location = "/";
+            window.location = "/main";
         }
     }
     console.log(errors)
