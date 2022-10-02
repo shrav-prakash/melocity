@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import './forml.css'
+import axios from 'axios';
+import './forml.css';
 import Field from './field'
 import ico from '../assets/favico.svg';
 
@@ -29,13 +30,32 @@ function Forml() {
 
     const [sel, setsel] = useState(1);
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const [data, setdata] = useState({
+        Username: "",
+        Password: "",
+        Email: ""
+    });
 
     const onSubmit = data => {
         console.log(data)
-        if (Object.keys(errors).length == 0) {
-            window.location = "/main";
-        }
+        setdata(data)
     }
+
+    useEffect(() => {
+        let url = 0;
+        if (sel == 0) {
+            url = "http://localhost:3001/auth/login";
+        } else {
+            url = "http://localhost:3001/auth/register"
+        }
+        axios.post(url, {
+            user: data.Username,
+            pass: data.Password,
+            email: data.Email
+        }).then((res) => {
+            console.log(res.data)
+        })
+    }, [data])
     console.log(errors)
 
     return (
