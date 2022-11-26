@@ -7,7 +7,8 @@
   --spdbluea: rgba(35, 59, 98, 0);
 }
 
-h1 {
+h1,
+label {
   color: var(--spblue);
 }
 
@@ -35,16 +36,35 @@ h1 {
   display: block;
 }
 
-.main {
+.pfcont {
   display: flex;
-  flex-direction: row;
-  overflow: auto;
-  background-image: url("../../assets/bg.png");
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url("../assets/bg.png");
   background-size: cover;
   background-attachment: fixed;
   width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   gap: 1em;
-  padding: 2em;
+}
+
+.pfinp {
+  font-size: 1.3em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.pfinp > input {
+  color: black;
+}
+
+input[type="date"] {
+  width: 93%;
 }
 
 .mainsong,
@@ -110,48 +130,4 @@ h1 {
   padding: 0.2em 0.7em;
   border-radius: 20em;
   width: 15%;
-}
-
-.playicon {
-  color: var(--spgrey);
-  transform: translate(55vw, -2em);
-  position: absolute;
-  height: 60px;
-  display: flex;
-  padding-left: 5px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 40px;
-  cursor: pointer;
-}
-
-.playicon2 {
-  color: var(--spgrey);
-  background-color: var(--spblue);
-  transform: translate(69vw, -21vh);
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 40px;
-  cursor: pointer;
-}
-
-.downicon {
-  color: var(--spgrey);
-  background-color: var(--spblue);
-  transform: translate(65vw, -21vh);
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 30px;
-  cursor: pointer;
 }

@@ -1,0 +1,16 @@
+.pnamelist > li {
+  margin: 1em 0em;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.imgsmall {
+  width: 70px;
+  height: 70px;
+}
+
+.imgbig {
+  width: 200px;
+  height: 20 0px;
+}

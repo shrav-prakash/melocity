@@ -1,16 +1,41 @@
 :root {
+  --spgrey: rgb(15, 15, 15);
   --spblue: rgb(71, 134, 227);
+  --spdblue: rgb(35, 59, 98);
+  --spdbluea: rgba(35, 59, 98, 0);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .top {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 1);
+  backdrop-filter: blur(10px);
   width: 100vw;
   height: 10vh;
-  margin-top: -20px;
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  position: fixed;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  gap: 20vw;
+}
+
+.prof {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+#logout {
+  padding: 0.5em 1em;
+  background-color: transparent;
+  color: var(--spblue);
+  border: 2px var(--spblue) solid;
+  border-radius: 0.6em;
 }
 
 h3 {
@@ -19,9 +44,9 @@ h3 {
 }
 
 .logo {
-  width: 2em;
+  width: 1.5em;
   background-color: var(--spblue);
-  padding: 20px;
+  padding: 0.8em;
   border-radius: 25%;
 }
 
@@ -29,11 +54,36 @@ h3 {
   display: flex;
   align-items: center;
   gap: 1em;
-  padding-top: 1em;
 }
 
 .melo {
   color: var(--spblue);
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: bold;
+}
+
+.crs,
+.mglass {
+  width: 0;
+  font-size: 1.2em;
+  color: var(--spgrey);
+}
+
+.crs {
+  transform: translateX(-25px);
+  cursor: pointer;
+}
+
+.mglass {
+  transform: translateX(15px);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.sbar {
+  width: 20vw;
+  padding-left: 50px;
 }

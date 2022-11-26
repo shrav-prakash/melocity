@@ -28,6 +28,11 @@ function tab(sel, reg, errors) {
 
 function Forml() {
 
+    if (localStorage.getItem('tok') != undefined && localStorage.getItem('tok') != '') {
+        console.log(localStorage.getItem('tok'))
+        window.location = '/main'
+    }
+
     const [sel, setsel] = useState(1);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [data, setdata] = useState({
@@ -37,12 +42,13 @@ function Forml() {
     });
 
     const onSubmit = data => {
-        console.log(data)
+        // console.log(data)
         setdata(data)
     }
 
     useEffect(() => {
-        let url = 0;
+        console.log(data)
+        let url = '';
         if (sel == 0) {
             url = "http://localhost:3001/auth/login";
         } else {
@@ -53,7 +59,13 @@ function Forml() {
             pass: data.Password,
             email: data.Email
         }).then((res) => {
+            if (res.data.token != undefined) {
+                localStorage.setItem("tok", res.data.token);
+                window.location = '/main'
+            }
             console.log(res.data)
+        }).catch((err) => {
+            console.log(err)
         })
     }, [data])
     console.log(errors)

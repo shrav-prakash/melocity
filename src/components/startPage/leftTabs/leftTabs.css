@@ -1,0 +1,62 @@
+:root {
+  --spgrey: rgb(15, 15, 15);
+  --spblue: rgb(71, 134, 227);
+  --spdblue: rgb(35, 59, 98);
+  --spdbluea: rgba(35, 59, 98, 0);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.lefttabs {
+  height: 90vh;
+  width: 20vw;
+  background-color: var(--spgrey);
+  display: flex;
+  flex-direction: column;
+  padding-left: 2em;
+}
+
+.tabs,
+.plists {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.plists {
+  margin: 15px 0;
+  margin-left: 0.5em;
+}
+
+.tabs > li,
+.plists > li {
+  color: var(--spblue);
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.tabs > li {
+  padding: 0.5em 0;
+  gap: 1em;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.plists > li {
+  padding: 0.5em 0;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.line {
+  /* margin: 10px 0; */
+  background-color: var(--spdblue);
+  height: 2px;
+  width: 87%;
+  border-radius: 40px;
+}
